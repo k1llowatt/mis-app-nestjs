@@ -10,7 +10,7 @@ export class ApiService {
 
   findAll() {
     console.log("findAll");
-    return `This action returns all api`;
+    return `API`;
   }
 
   findOne(id: number) {

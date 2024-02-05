@@ -9,7 +9,7 @@ export class PatientService {
   }
 
   findAll() {
-    return `This action returns all patient`;
+    return `Patient API`;
   }
 
   findOne(id: number) {

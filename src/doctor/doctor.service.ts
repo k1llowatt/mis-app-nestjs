@@ -9,7 +9,7 @@ export class DoctorService {
   }
 
   findAll() {
-    return `This action returns all doctor`;
+    return `Doctor API`;
   }
 
   findOne(id: number) {
