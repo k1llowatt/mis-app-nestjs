@@ -1,16 +1,17 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Doctor } from '../../doctor/entities/doctor.entity'
+import { Patient } from '../../patient/entities/patient.entity'
 
 @Entity()
 export class Order {
-
   @PrimaryGeneratedColumn()
   uuid: string
 
-  @Column()
-  doctor_id: string
+  @ManyToOne(() => Doctor, (doctor) => doctor.uuid)
+  doctor: Doctor
 
-  @Column()
-  patient_id: string
+  @ManyToOne(() => Patient, (patient) => patient.uuid)
+  patient: Patient
 
   @Column()
   date: string
@@ -22,9 +23,8 @@ export class Order {
   time_to: string
 
   @Column()
-  isFree:boolean
+  isFree: boolean
 
   @Column()
   type: number
-
 }

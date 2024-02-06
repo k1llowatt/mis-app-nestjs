@@ -1,27 +1,27 @@
-import { Injectable } from '@nestjs/common';
-import { CreateApiDto } from './dto/create-api.dto';
-import { UpdateApiDto } from './dto/update-api.dto';
+import { Injectable } from '@nestjs/common'
+import { CreateApiDto } from './dto/create-api.dto'
+import { UpdateApiDto } from './dto/update-api.dto'
 
 @Injectable()
 export class ApiService {
   create(createApiDto: CreateApiDto) {
-    return 'This action adds a new api';
+    return 'This action adds a new api'
   }
 
   findAll() {
-    console.log("findAll");
-    return `API`;
+    console.log('findAll')
+    return `API`
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} api`;
+    return `This action returns a #${id} api`
   }
 
   update(id: number, updateApiDto: UpdateApiDto) {
-    return `This action updates a #${id} api`;
+    return `This action updates a #${id} api`
   }
 
   remove(id: number) {
-    return `This action removes a #${id} api`;
+    return `This action removes a #${id} api`
   }
 }
