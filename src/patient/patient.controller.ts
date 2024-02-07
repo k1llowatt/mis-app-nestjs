@@ -6,6 +6,8 @@ import {
   Patch,
   Param,
   Delete,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common'
 import { PatientService } from './patient.service'
 import { CreatePatientDto } from './dto/create-patient.dto'
@@ -18,6 +20,7 @@ export class PatientController {
   constructor(private readonly patientService: PatientService) {}
 
   @Post()
+  @UsePipes(new ValidationPipe())
   create(@Body() createPatientDto: CreatePatientDto) {
     return this.patientService.create(createPatientDto)
   }

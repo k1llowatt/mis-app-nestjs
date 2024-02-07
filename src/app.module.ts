@@ -7,6 +7,7 @@ import { PatientModule } from './patient/patient.module'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { OrderModule } from './order/order.module'
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { OrderModule } from './order/order.module'
       inject: [ConfigService],
     }),
     OrderModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
